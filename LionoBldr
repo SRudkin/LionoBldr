@@ -25,14 +25,6 @@
     #Run installer
     echo mozilla | sudo -S sudo dpkg -i rr-5.2.0-Linux-$(uname -m).deb
 
-#Not working yet
-	#Install GDB 
-	#$ echo mozilla | sudo -S  apt-get install libatk1.0-dbg libc6-dbg libcairo2-dbg \
- 	#libfontconfig1-dbg libgcc1-dbg libglib2.0-0-dbg libgnomeui-0-dbg \
- 	#libgnomevfs2-0-dbg libgnutls13-dbg libgtk2.0-0-dbg libice6-dbg \
- 	#libjpeg62-dbg libpango1.0-0-dbg libpixman-1-0-dbg libstdc++6-4.2-dbg \
- 	#libx11-6-dbg libx11-xcb1-dbg libxcb1-dbg libxft2-dbg zlib1g-dbg
- 
  	#Install HG
 	  #Install SSH shell
     echo mozilla | -S sudo apt-get install ssh -y
@@ -63,3 +55,4 @@
 
 	#Install GDP 
 	echo mozilla | sudo -S apt-get install gdb
+	echo mozilla | sudo -S apt update
