@@ -60,3 +60,6 @@
 	#Install EMACS
 	echo mozilla | sudo -S apt-get install emacs -y
 	echo mozilla | sudo -S apt update
+
+	#Install GDP 
+	echo mozilla | sudo -S apt-get install gdb
