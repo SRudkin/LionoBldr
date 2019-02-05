@@ -35,26 +35,28 @@
  
  	#Install HG
 	  #Install SSH shell
-    sudo apt-get install ssh 
+    echo mozilla | -S sudo apt-get install ssh -y
       
      #Install HG 
-	   echo mozilla | sudo -S apt-get install mercurial
+	   echo mozilla | sudo -S apt-get install mercurial -y
   
  # Install Git
 	echo mozilla | sudo -S apt-get update
-	echo mozilla | sudo -S apt-get install git-core
+	echo mozilla | sudo -S apt-get install git-core -y
 	
 	#Install Python
 	echo mozilla | sudo -S  apt-get update
-  echo mozilla | sudo -S  apt-get -y upgrade
-	echo mozilla | sudo -S  apt-get install build-essential libssl-dev libffi-dev python-dev
+  	echo mozilla | sudo -S  apt-get -y upgrade
+	echo mozilla | sudo -S  apt-get install build-essential libssl-dev libffi-dev python-dev -y
 	echo mozilla | sudo -S  apt-get install -y python3-venv
 	
 	#Install VIM
-	echo mozilla | sudo -S  apt remove -y vim-tiny
-	echo mozilla | sudo -S  apt update
+		#Remove the default installed tiny-VIM 
+		echo mozilla | sudo -S  apt remove -y vim-tiny
+		#Install VIM
+		echo mozilla | sudo -S  apt update
 	echo mozilla | sudo -S  apt install -y vim
 
 	#Install EMACS
-	echo mozilla | sudo -S apt-get install emacs
+	echo mozilla | sudo -S apt-get install emacs -y
 	
