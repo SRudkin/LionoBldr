@@ -1,0 +1,60 @@
+  #Install Nightly
+	#pipe the sudo password into the command line and not prompt for password
+  #get the repository for FF Nightly
+	echo mozilla | sudo -S  add-apt-repository ppa:ubuntu-mozilla-daily/ppa
+  #Run the updater
+  echo mozilla | sudo -S  apt-get update
+  #Install the package
+  echo mozilla | sudo -S  apt-get install firefox-trunk 
+	
+	#Install Developer Edition
+	echo mozilla | sudo -S  add-apt-repository ppa:ubuntu-mozilla-daily/firefox-aurora 
+	echo mozilla | sudo -S  apt-get update 
+	echo mozilla | sudo -S  apt-get install firefox 
+	
+	#Install RR 
+    #Installing Dependencies
+    echo mozilla | sudo -S apt-get install ccache cmake make g++-multilib gdb \
+    pkg-config coreutils python3-pexpect python-pexpect manpages-dev git \
+    ninja-build capnproto libcapnp-dev
+    
+    #Install RR 
+    cd /tmp
+    #Download from internet
+    wget https://github.com/mozilla/rr/releases/download/5.2.0/rr-5.2.0-Linux-$(uname -m).deb
+    #Run installer
+    echo mozilla | sudo -S sudo dpkg -i rr-5.2.0-Linux-$(uname -m).deb
+
+#Not working yet
+	#Install GDB 
+	#$ echo mozilla | sudo -S  apt-get install libatk1.0-dbg libc6-dbg libcairo2-dbg \
+ 	#libfontconfig1-dbg libgcc1-dbg libglib2.0-0-dbg libgnomeui-0-dbg \
+ 	#libgnomevfs2-0-dbg libgnutls13-dbg libgtk2.0-0-dbg libice6-dbg \
+ 	#libjpeg62-dbg libpango1.0-0-dbg libpixman-1-0-dbg libstdc++6-4.2-dbg \
+ 	#libx11-6-dbg libx11-xcb1-dbg libxcb1-dbg libxft2-dbg zlib1g-dbg
+ 
+ 	#Install HG
+	  #Install SSH shell
+    sudo apt-get install ssh 
+      
+     #Install HG 
+	   echo mozilla | sudo -S apt-get install mercurial
+  
+ # Install Git
+	echo mozilla | sudo -S apt-get update
+	echo mozilla | sudo -S apt-get install git-core
+	
+	#Install Python
+	echo mozilla | sudo -S  apt-get update
+  echo mozilla | sudo -S  apt-get -y upgrade
+	echo mozilla | sudo -S  apt-get install build-essential libssl-dev libffi-dev python-dev
+	echo mozilla | sudo -S  apt-get install -y python3-venv
+	
+	#Install VIM
+	echo mozilla | sudo -S  apt remove -y vim-tiny
+	echo mozilla | sudo -S  apt update
+	echo mozilla | sudo -S  apt install -y vim
+
+	#Install EMACS
+	echo mozilla | sudo -S apt-get install emacs
+	
